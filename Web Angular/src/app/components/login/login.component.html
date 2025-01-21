@@ -1,0 +1,130 @@
+<div class="container">
+  <div class="row">
+    <!-- Columna de Login -->
+    <div class="col-md-6">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar text-center">
+            <img
+              src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png"
+              alt="user"
+              class="user-image"
+            />
+          </div>
+          <form (submit)="LoguearUsuario()">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                [(ngModel)]="emailIntroducido"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                placeholder="**"
+                [(ngModel)]="contraseniaIntroducida"
+              />
+              <div class="text-right forget-pass">
+                <a routerLink="/forget-password">¿Olvidaste tu contraseña?</a>
+              </div>
+            </div>
+            <div class="text-center">
+              <input type="submit" class="btn btn-my" value="Iniciar Sesión" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna de Registro -->
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center">Registro de Cliente</h2>
+          <form (ngSubmit)="RegistrarCliente()" #registerForm="ngForm">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                [(ngModel)]="emailIntroducido"
+                name="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="contraseña">Contraseña:</label>
+              <input
+                type="password"
+                id="contraseña"
+                class="form-control"
+                [(ngModel)]="contraseniaIntroducida"
+                name="contraseña"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input
+                type="text"
+                id="nombre"
+                class="form-control"
+                [(ngModel)]="nombreIntroducido"
+                name="nombre"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="apellidos">Apellidos:</label>
+              <input
+                type="text"
+                id="apellidos"
+                class="form-control"
+                [(ngModel)]="apellidosIntroducido"
+                name="apellidos"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                class="form-control"
+                [(ngModel)]="telefonoIntroducido"
+                name="telefono"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="direccion_Envio">Dirección de Envío:</label>
+              <input
+                type="text"
+                id="direccion_Envio"
+                class="form-control"
+                [(ngModel)]="direccionEnvioIntroducido"
+                name="direccion_Envio"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="btn btn-success"
+              [disabled]="!registerForm.valid"
+            >
+              Registrar Cliente
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

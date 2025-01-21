@@ -1,0 +1,121 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.auth-avatar .user-image,
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Typography */
+h2 {
+  text-align: center;
+  color: rgb(0, 132, 255);
+}
+
+.auth-card h2,
+.card-body h2 {
+  color: rgb(0, 132, 255);
+}
+
+p {
+  color: #777;
+}
+
+/* Form Styling */
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn-my {
+  background-color: rgb(0, 132, 255);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-my:hover {
+  background-color: rgb(0, 132, 255);
+}
+
+.btn-success {
+  background-color: rgb(0, 132, 255);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: rgb(0, 132, 255);
+}
+
+/* Additional Links */
+.text-right.forget-pass a {
+  font-size: 12px;
+  color: #d39e00;
+  text-decoration: none;
+}
+
+.sign-up {
+  color: #fff;
+}
+
+.sign-up a {
+  color: #d39e00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .btn-my,
+  .btn-success {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}

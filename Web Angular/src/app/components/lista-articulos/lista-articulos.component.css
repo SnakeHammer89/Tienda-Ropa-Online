@@ -1,0 +1,55 @@
+.articulo-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin-bottom: 64px;
+}
+
+.articulos-container {
+  display: flex;
+  justify-content: center;
+}
+
+.paginacion button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.paginacion button.active {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007bff;
+}
+
+.columnas-filtrado {
+  display: flex; /* Cambiamos a flexbox para mejor control */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 20px; /* Espacio entre los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten si hay poco espacio */
+}
+
+.columnas-filtrado select {
+  width: 120px; /* Tamaño más pequeño */
+  height: 30px; /* Altura pequeña */
+  font-size: 10px; /* Texto más pequeño */
+  text-align: center; /* Centra el texto */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Fondo claro */
+  cursor: pointer; /* Cambia el cursor para indicar interactividad */
+}
+
+.columnas-filtrado select option {
+  text-align: left; /* Opciones alineadas a la izquierda */
+}
+
+.columnas-filtrado select:focus {
+  outline: none; /* Quita el borde azul */
+  border-color: #007BFF; /* Cambia el borde al seleccionar */
+  background-color: #ffffff; /* Fondo blanco al seleccionar */
+}

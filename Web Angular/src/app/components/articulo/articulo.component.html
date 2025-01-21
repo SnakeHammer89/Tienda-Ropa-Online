@@ -1,0 +1,11 @@
+<div class="articulo-container">
+  <a [routerLink]="'/' + articulo.categoria + '-' + articulo.modelo + '-' + articulo.color + '-' + articulo.talla"><img
+    src="{{ articulo.url_Imagen }}" alt="" class="articulo-image"></a>
+  <p>{{ articulo.categoria }} {{ articulo.modelo }}</p>
+  <p>{{ articulo.precio }} €</p>
+  <form (ngSubmit)="AlCarrito(articulo)">
+    <input type="number" name="amount" min="1" [defaultValue]="1" class="select-input" [(ngModel)]="cantidad_Articulo">
+    <br>
+    <button type="submit" (click)="agregar.emit()">Agregar al carrito</button>
+  </form>
+</div>

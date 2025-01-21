@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Mis Pedidos</h1>
+
+  <!-- Lista de pedidos -->
+  <div class="pedido-container" *ngIf="pedidos.length > 0; else noPedidos">
+    <table>
+      <thead>
+      <tr>
+        <th># Nombre</th>
+        <th># Numero de Pedido</th>
+        <th>Fecha</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let pedido of pedidos">
+        <td>{{ pedido.Nombre }}</td>
+        <td>
+          <a [routerLink]="['/informacion-pedido', pedido.ID_Pedido]">{{ pedido.ID_Pedido }}</a>
+        </td>
+        <td>{{ pedido.Fecha }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mensaje si no hay pedidos -->
+  <ng-template #noPedidos>
+    <p>No has realizado ningún pedido aún.</p>
+  </ng-template>
+</div>
+

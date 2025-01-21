@@ -1,0 +1,41 @@
+<div class="columnas-filtrado">
+  <select id="categoria" [(ngModel)]="categoriaSeleccionada" (ngModelChange)="BuscarArticulo()">
+    <option value="" disabled selected>Categoria</option>
+    <option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria }}</option>
+  </select>
+
+  <select id="modelo" [(ngModel)]="modeloSeleccionado" (ngModelChange)="BuscarArticulo()">
+    <option value="" disabled selected>Modelo</option>
+    <option *ngFor="let modelo of modelos" [value]="modelo">{{ modelo }}</option>
+  </select>
+
+  <select id="color" [(ngModel)]="colorSeleccionado" (ngModelChange)="BuscarArticulo()">
+    <option value="" disabled selected>Color</option>
+    <option *ngFor="let color of colores" [value]="color">{{ color }}</option>
+  </select>
+
+  <select id="talla" [(ngModel)]="tallaSeleccionada" (ngModelChange)="BuscarArticulo()">
+    <option value="" disabled selected>Talla</option>
+    <option *ngFor="let talla of tallas" [value]="talla">{{ talla }}</option>
+  </select>
+
+  <p *ngIf="articulos.length === 0">No se encontraron artículos.</p>
+</div>
+<div class="articulos-container" fxLayout="row wrap" fxLayoutAlign="center">
+  <app-articulo
+    *ngFor="let articulo of articulosPaginados"
+    fxFlexOffset="5%"
+    class="articulo-index"
+    [articulo]="articulo"
+    (agregar)="Agregar()">
+  </app-articulo>
+</div>
+<div class="paginacion" fxLayout="row" fxLayoutAlign="center">
+  <button
+    (click)="CambiarPagina(pagina)"
+    *ngFor="let pagina of ObtenerPaginas()"
+    [class.active]="pagina === paginaActual">
+    {{ pagina }}
+  </button>
+</div>
+

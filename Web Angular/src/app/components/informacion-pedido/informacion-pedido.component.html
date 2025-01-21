@@ -1,0 +1,22 @@
+<div class="pedido-detalle" *ngIf="detallesPedidos.length > 0">
+  <table>
+    <thead>
+    <tr>
+      <th>Pedido</th>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let detalle of detallesPedidos">
+      <td>{{ detalle.iD_Detalle }}</td>
+      <td>{{ detalle.iD_Articulo }}</td>
+      <td>{{ detalle.cantidad }}</td>
+      <td>{{ detalle.precio_Unitario }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button (click)="volverALista()">Volver a la lista de pedidos</button>
+</div>
+<p *ngIf="detallesPedidos.length === 0">No se encontró información detallada sobre este pedido.</p>

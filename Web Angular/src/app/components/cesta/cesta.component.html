@@ -1,0 +1,20 @@
+<div class="carrito-container" *ngIf="carrito.length != 0; else empty">
+    <ul>
+        <li *ngFor="let item of carrito" class="articulo-carrito">
+            <img src="{{ item.Url_Imagen }}" alt="" *ngIf="item.cantidad_Articulo != 0">
+            <div class="articulo-carrito-detalles" *ngIf="item.cantidad_Articulo != 0">
+                <p>{{ item.Categoria }} {{ item.Modelo }}</p>
+                <p>{{ item.precio_Articulo }}</p>
+                <label for="amount">Cantidad: </label>
+                <input type="number" name="amount" min="0" class="cantidad-input" [defaultValue]="1"
+                       [(ngModel)]="item.cantidad_Articulo" (ngModelChange)="CambiarCantidad()">
+            </div>
+        </li>
+        <p>Total: {{ total }} €</p>
+      <button type="submit" (click)="FinalizarCarrito()">Finalizar Compra</button>
+    </ul>
+</div>
+<ng-template #empty>
+    <p class="carrito-vacio-mensaje">Tu carrito esta vacio</p>
+    <a routerLink="/">Ir a lista de productos</a>
+</ng-template>

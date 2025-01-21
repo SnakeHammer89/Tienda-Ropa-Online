@@ -1,0 +1,60 @@
+img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.formulario-margin {
+  margin-bottom: 50px;
+}
+
+.articulo-carrito {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.articulo-carrito-detalles {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.cantidad-input {
+  width: 80px;
+  text-align: center;
+}
+
+.carrito-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.carrito-panel {
+  margin-left: 70px;
+  margin-right: 50px;
+}
+
+.carrito-vacio-mensaje {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+}
+
+button {
+  background: rgb(0, 132, 255);
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
